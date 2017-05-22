@@ -1,13 +1,22 @@
 {
+  "name": "bill-portfolio-wp",
+  "version": "1.0.0",
   "dependencies": {
+    "mini.css": "^2.2.0",
     "next": "^2.4.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
   "scripts": {
+    "build-css": "node-sass-chokidar static/styles -o static/styles",
+    "watch-css": "npm run build-css && node-sass-chokidar static/styles -o static/styles --watch --recursive",
     "dev": "next",
     "build": "next build",
     "start": "next start -p $PORT",
     "heroku-postbuild": "next build"
+  },
+  "devDependencies": {
+    "node-sass-chokidar": "^0.0.1",
+    "npm-run-all": "^4.0.2"
   }
 }
