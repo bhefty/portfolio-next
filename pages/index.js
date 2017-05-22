@@ -1,11 +1,13 @@
 
 import Layout from '../components/layout'
-import SocialStrip from '../components/socialStrip'
+import About from '../components/about'
+import ProjectSpacer from '../components/projectSpacer'
 
 export default () => (
     <div>
         <Layout>
-            <SocialStrip />
+            <About />
+            <ProjectSpacer />
             <br />
             <br />
             <br />

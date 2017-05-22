@@ -3,8 +3,10 @@
     src: url('/static/font/BebasNeue.otf');
 }
 
-$pirmary-color: #85888D;
-$secondary-color: #D3CFC6;
+$primary-color: #2E3440;
+$light-font: #f5f5f5;
+
+
 
 #logo-img {
     width: 48px;
@@ -19,13 +21,13 @@ $secondary-color: #D3CFC6;
 
 .splash-container {
     position: relative;
-    background: $pirmary-color url('/static/img/splash-macbook.jpg') fixed top center;
+    background: $primary-color url('/static/img/splash-macbook.jpg') fixed top center;
     height: calc(100vh - 48px);
     overflow: hidden;
     text-align: center;
 
     .splash-text {
-        color: #f5f5f5;
+        color: $light-font;
         position: absolute;
         top: 30vh;
         width: 100%;
@@ -56,5 +58,40 @@ $secondary-color: #D3CFC6;
 .social {
     width: 50px;
     height: 50px;
-    fill: #f5f5f5;
+    fill: $light-font;
+}
+
+#about {
+    background-color: #e6e6e6;
+    padding: 50px 0;
+
+    .about-container {
+        max-width: 1200px;
+
+        .about-head {
+            font-size: 2.5em;
+            font-weight: 400;
+        }
+
+        .about-subhead {
+            font-size: 1.5em;
+            font-weight: 300;
+            text-align: justify;
+        }
+        
+        #profile-pic {
+            border: 1px solid $primary-color;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.18), 0 2px 3px rgba(0,0,0,0.26);
+        }
+    }
+    
+}
+
+#project-spacer {
+    position: relative;
+    background: $primary-color url('/static/img/macbook-projects-hero.jpeg') fixed top center;
+    height: calc(100vh - 48px);
+    overflow: hidden;
+    text-align: center;
 }
