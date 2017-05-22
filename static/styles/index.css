@@ -62,7 +62,7 @@
 
 #project-spacer {
   position: relative;
-  background: #2E3440 url("/static/img/macbook-projects-hero.jpeg") fixed top center;
-  height: calc(100vh - 48px);
+  background: #2E3440 url("/static/img/macbook-projects-hero.jpeg") fixed top center no-repeat;
+  height: calc(50vh - 48px);
   overflow: hidden;
   text-align: center; }
