@@ -4,6 +4,8 @@
 }
 
 $primary-color: #2E3440;
+$secondary-color: #293B3A;
+$tirtiary-color: #5B7472;
 $light-font: #f5f5f5;
 
 
@@ -103,4 +105,51 @@ $light-font: #f5f5f5;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
     position: relative;
     top: 35%;
+}
+
+#projects-section {
+    background-color: #e6e6e6;
+    padding: 50px 0;
+
+    .projects-container {
+        margin: 0 auto;
+        max-width: 1200px;
+
+        .projects-subhead {
+            font-size: 1.5em;
+            font-weight: 300;
+            text-align: center;
+            padding-bottom: 25px;
+        }
+    }
+}
+
+.project-card {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+
+    .project-card-img {
+        margin: 0 auto;
+        max-width: 425px;
+    }
+
+    .project-card-link {
+        font-size: .7em;
+        color: #A0A6AB;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    
+    h3 {
+        font-size: 2em;
+        color: #555;
+        margin: 0.8em 0;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+    
 }
