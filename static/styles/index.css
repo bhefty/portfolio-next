@@ -67,6 +67,13 @@
   overflow: hidden;
   text-align: center; }
 
+#blog-spacer {
+  position: relative;
+  background: #2E3440 url("/static/img/blog-spacer.jpg") fixed top center no-repeat;
+  height: 50vh;
+  overflow: hidden;
+  text-align: center; }
+
 #contact-spacer {
   position: relative;
   background: #2E3440 url("/static/img/contact-spacer.jpg") fixed top center no-repeat;
