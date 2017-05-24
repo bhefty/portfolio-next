@@ -34,7 +34,9 @@ export default ({ children, title = 'Bill Hefty' }) => (
             <Link href='/blog'><a>Blog</a></Link>
         </nav>
 
-        { children }
+        <main>
+            { children }
+        </main>
 
         <Footer />
     </div>

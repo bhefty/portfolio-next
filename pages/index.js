@@ -1,65 +1,23 @@
 
 import Layout from '../components/layout'
-import SocialStrip from '../components/socialStrip'
+import About from '../components/about'
+import ProjectSpacer from '../components/projectSpacer'
+import ProjectsSection from '../components/projectsSection'
+import BlogSpacer from '../components/blogSpacer'
+import BlogSection from '../components/blogSection'
+import ContactSpacer from '../components/contactSpacer'
+import Contact from '../components/contact'
 
 export default () => (
     <div>
         <Layout>
-            <SocialStrip />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+            <About />
+            <ProjectSpacer />
+            <ProjectsSection />
+            <BlogSpacer />
+            <BlogSection />
+            <ContactSpacer />
+            <Contact />
         </Layout>
     </div>
 )
