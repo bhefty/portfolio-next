@@ -63,7 +63,14 @@
 #project-spacer {
   position: relative;
   background: #2E3440 url("/static/img/macbook-projects-hero.jpeg") fixed top center no-repeat;
-  height: calc(50vh - 48px);
+  height: 50vh;
+  overflow: hidden;
+  text-align: center; }
+
+#contact-spacer {
+  position: relative;
+  background: #2E3440 url("/static/img/contact-spacer.jpg") fixed top center no-repeat;
+  height: 50vh;
   overflow: hidden;
   text-align: center; }
 
@@ -71,7 +78,7 @@
   color: #f5f5f5;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 5em;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.95);
   position: relative;
   top: 35%; }
 
@@ -106,3 +113,23 @@
     margin: 0.8em 0; }
   .project-card p {
     font-size: 0.9em; }
+
+#contact-section {
+  background-color: #fff;
+  padding: 50px 0;
+  padding-bottom: 0; }
+  #contact-section .contact-container {
+    margin: 0 auto;
+    max-width: 1200px; }
+    #contact-section .contact-container img {
+      position: relative;
+      bottom: -6px; }
+    #contact-section .contact-container .contact-subhead {
+      font-size: 2em;
+      font-weight: 300;
+      text-align: center;
+      padding-bottom: 25px;
+      margin: auto; }
+
+footer {
+  margin: 0; }
