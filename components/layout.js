@@ -5,6 +5,8 @@ import Link from 'next/link'
 import Splash from '../components/splash'
 import Footer from './footer'
 
+import 'isomorphic-fetch'
+
 export default ({ children, title = 'Bill Hefty' }) => (
     <div>
         <Head>

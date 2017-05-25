@@ -2,6 +2,7 @@
   "name": "bill-portfolio-wp",
   "version": "1.0.0",
   "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
     "mini.css": "^2.2.0",
     "next": "^2.4.0",
     "react": "^15.5.4",
