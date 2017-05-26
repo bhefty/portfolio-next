@@ -5,6 +5,9 @@ node_modules
 dist
 .next
 
+# env variables
+env-config.js
+
 # logs
 npm-debug.log
 
