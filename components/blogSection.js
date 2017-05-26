@@ -9,7 +9,7 @@ class BlogSection extends Component {
     }
 
     componentDidMount() {
-        const fetchRecentPost = fetch(`http://billhefty-portfolio-wp.herokuapp.com/wp-json/wp/v2/posts?orderBy=date&per_page=1&_embed`)
+        const fetchRecentPost = fetch(`http://billhefty-portfolio-wp.herokuapp.com/wp-json/wp/v2/posts?orderBy=date&per_page=1&_embed&categories=2`)
 
         fetchRecentPost.then((response) => response.json())
             .then((post) => {
