@@ -188,4 +188,10 @@
       margin: auto; }
 
 footer {
-  margin: 0; }
+  margin: 0 auto;
+  text-align: center; }
+  footer p {
+    color: #A0A6AB; }
+  footer .social {
+    width: 30px;
+    height: 30px; }

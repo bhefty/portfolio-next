@@ -1,9 +1,11 @@
 import React from 'react';
+import SocialStrip from './socialStrip'
 
 const Footer = () => {
     return (
         <footer>
-            <p>Footer</p>
+            <p>made by me &copy; 2017</p>
+            <SocialStrip />
         </footer>
     );
 };
