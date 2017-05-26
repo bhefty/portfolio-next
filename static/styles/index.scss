@@ -145,13 +145,18 @@ $light-white: #f5f5f5;
         box-shadow: none;
     }
 
-    .slick-prev:before, .slick-next:before, .slick-prev:focus, .slick-next:focus, .slick-prev:active, .slick-next:active, .slick-prev:hover, .slick-next:hover {
+    .slick-prev:before, .slick-next:before, {
         font-size: 40px;
         color: #2E3440;
     }
 
     .slick-prev {
         left: -45px;
+    }
+
+    .slick-arrow {
+        width: 40px;
+        height: 40px;
     }
 
     .projects-container {
