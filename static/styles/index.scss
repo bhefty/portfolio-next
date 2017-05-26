@@ -145,7 +145,7 @@ $light-white: #f5f5f5;
         box-shadow: none;
     }
 
-    .slick-prev:before, .slick-next:before {
+    .slick-prev, .slick-next {
         font-size: 40px;
         color: #2E3440;
     }
@@ -176,8 +176,6 @@ $light-white: #f5f5f5;
 
 .project-card {
     text-align: center;
-    // margin: 40px auto;
-    // padding: 20px;
     .project-card-container {
         margin: auto 25px;
     }
