@@ -13,7 +13,8 @@
 
 .splash-container {
   position: relative;
-  background: #2E3440 url("/static/img/splash-macbook.jpg") fixed top center;
+  background: #2E3440 url("/static/img/splash-macbook.jpg") no-repeat center center fixed;
+  background-size: cover;
   height: calc(100vh - 48px);
   overflow: hidden;
   text-align: center; }
@@ -62,21 +63,24 @@
 
 #project-spacer {
   position: relative;
-  background: #2E3440 url("/static/img/macbook-projects-hero.jpeg") fixed top center no-repeat;
+  background: #2E3440 url("/static/img/macbook-projects-hero.jpeg") no-repeat center center fixed;
+  background-size: cover;
   height: 35vh;
   overflow: hidden;
   text-align: center; }
 
 #blog-spacer {
   position: relative;
-  background: #2E3440 url("/static/img/blog-spacer.jpg") fixed top center no-repeat;
+  background: #2E3440 url("/static/img/blog-spacer.jpg") no-repeat center center fixed;
+  background-size: cover;
   height: 35vh;
   overflow: hidden;
   text-align: center; }
 
 #contact-spacer {
   position: relative;
-  background: #2E3440 url("/static/img/contact-spacer.jpg") fixed top center no-repeat;
+  background: #2E3440 url("/static/img/contact-spacer.jpg") no-repeat center center fixed;
+  background-size: cover;
   height: 35vh;
   overflow: hidden;
   text-align: center; }
