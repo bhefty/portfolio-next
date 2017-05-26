@@ -9,7 +9,7 @@ class BlogSection extends Component {
     }
 
     componentDidMount() {
-        const fetchRecentPost = fetch(`http://billhefty-portfolio-wp.herokuapp.com/wp-json/wp/v2/posts?orderBy=date&per_page=1`)
+        const fetchRecentPost = fetch(`http://billhefty-portfolio-wp.herokuapp.com/wp-json/wp/v2/posts?orderBy=date&per_page=1&_embed`)
 
         fetchRecentPost.then((response) => response.json())
             .then((post) => {
@@ -17,20 +17,12 @@ class BlogSection extends Component {
                     date: new Date(post[0].date).toLocaleDateString(),
                     title: post[0].title.rendered,
                     excerpt: post[0].excerpt.rendered.replace(/<p class=\"link-more\">.*/g, ''),
-                    mediaID: post[0].featured_media
+                    mediaURL: post[0]._embedded['wp:featuredmedia'][0].source_url
                 }
                 return latestPost
             })
             .then(latestPost => {
-                const fetchRecentPostImage = fetch(`http://billhefty-portfolio-wp.herokuapp.com/wp-json/wp/v2/media/${latestPost.mediaID}`)
-                fetchRecentPostImage.then(response => response.json())
-                    .then(media => {
-                        latestPost.mediaURL = media.guid.rendered
-                        return latestPost
-                    })
-                    .then(latestPost => {
-                        this.setState({ post: latestPost })
-                    })
+                this.setState({ post: latestPost })
             })
     }
     
