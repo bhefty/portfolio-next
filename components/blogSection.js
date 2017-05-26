@@ -8,22 +8,16 @@ class BlogSection extends Component {
         }
     }
 
-    componentDidMount() {
-        const fetchRecentPost = fetch(`${API_URL}?orderBy=date&per_page=1&_embed&categories=2`)
-
-        fetchRecentPost.then((response) => response.json())
-            .then((post) => {
-                let latestPost = {
-                    date: new Date(post[0].date).toLocaleDateString(),
-                    title: post[0].title.rendered,
-                    excerpt: post[0].excerpt.rendered.replace(/<p class=\"link-more\">.*/g, ''),
-                    mediaURL: post[0]._embedded['wp:featuredmedia'][0].source_url
-                }
-                return latestPost
-            })
-            .then(latestPost => {
-                this.setState({ post: latestPost })
-            })
+    async componentDidMount() {
+        const res = await fetch(`${API_URL}?orderBy=date&per_page=1&_embed&categories=2`)
+        const json = await res.json()
+        const latestPost = {
+            date: new Date(json[0].date).toLocaleDateString(),
+            title: json[0].title.rendered,
+            excerpt: json[0].excerpt.rendered.replace(/<p class=\"link-more\">.*/g, ''),
+            mediaURL: json[0]._embedded['wp:featuredmedia'][0].source_url
+        }
+        this.setState({ post: latestPost })
     }
     
     render() {
