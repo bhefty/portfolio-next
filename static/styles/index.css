@@ -106,7 +106,7 @@
   padding: 50px 0; }
   #projects-section button, #projects-section [type="button"] {
     box-shadow: none; }
-  #projects-section .slick-prev, #projects-section .slick-next {
+  #projects-section .slick-prev:before, #projects-section .slick-next:before, #projects-section .slick-prev:after, #projects-section .slick-next:after {
     font-size: 40px;
     color: #2E3440; }
   #projects-section .slick-prev {
