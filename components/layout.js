@@ -13,6 +13,8 @@ export default ({ children, title = 'Bill Hefty' }) => (
             <title>{ title }</title>
             <meta charSet='utf-8' />
             <meta name='viewport' content='width=device-width, initial-scale=1' />
+            <link rel='shortcut icon' href='/static/img/favicon.ico' type='image/x-icon' />
+            <link rel='icon' href='/static/img/favicon.ico' type='image/x-icon' />
             <link rel="stylesheet" href="/static/styles/vendor/mini-nord.min.css"/>
             <link rel='stylesheet' href='/static/styles/vendor/animate.css' />
             <link rel="stylesheet" href="/static/styles/vendor/slick.css"/>
