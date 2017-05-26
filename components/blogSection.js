@@ -32,7 +32,7 @@ class BlogSection extends Component {
             <section id='blog-section'>
                 <h2 className="blog-subhead">The latest post:</h2>
                 { !post.title ?
-                    <div className="post-loading">
+                    <div className="loading">
                         <div className="spinner-donut large tertiary"></div>
                     </div>
 

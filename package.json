@@ -7,7 +7,9 @@
     "mini.css": "^2.2.0",
     "next": "^2.4.0",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-slick": "^0.14.11",
+    "slick-carousel": "^1.6.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar static/styles -o static/styles",

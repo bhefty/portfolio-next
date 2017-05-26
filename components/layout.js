@@ -15,6 +15,8 @@ export default ({ children, title = 'Bill Hefty' }) => (
             <meta name='viewport' content='width=device-width, initial-scale=1' />
             <link rel="stylesheet" href="/static/styles/vendor/mini-nord.min.css"/>
             <link rel='stylesheet' href='/static/styles/vendor/animate.css' />
+            <link rel="stylesheet" href="/static/styles/vendor/slick.css"/>
+            <link rel="stylesheet" href="/static/styles/vendor/slick-theme.css"/>
             <link rel='stylesheet' href='/static/styles/index.css' />
         </Head>
 

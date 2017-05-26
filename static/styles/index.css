@@ -104,19 +104,31 @@
 #projects-section {
   background-color: #f5f5f5;
   padding: 50px 0; }
+  #projects-section button, #projects-section [type="button"] {
+    box-shadow: none; }
+  #projects-section .slick-prev:before, #projects-section .slick-next:before {
+    font-size: 40px;
+    color: #2E3440; }
+  #projects-section .slick-prev {
+    left: -45px; }
   #projects-section .projects-container {
     margin: 0 auto;
-    max-width: 1200px; }
+    max-width: 80%;
+    min-height: 0;
+    min-width: 0; }
     #projects-section .projects-container .projects-subhead {
       font-size: 1.5em;
       font-weight: 300;
       text-align: center;
       padding-bottom: 25px; }
+    #projects-section .projects-container .slider-container {
+      max-width: 900px;
+      margin: 0 auto; }
 
 .project-card {
-  text-align: center;
-  margin: 40px auto;
-  padding: 20px; }
+  text-align: center; }
+  .project-card .project-card-container {
+    margin: auto 25px; }
   .project-card .project-card-img {
     margin: 0 auto;
     max-width: 425px; }
@@ -133,6 +145,12 @@
   .project-card p {
     font-size: 0.9em; }
 
+.loading {
+  width: 100%;
+  text-align: center; }
+  .loading .spinner-donut {
+    margin: 0 auto; }
+
 #blog-section {
   background-color: #f5f5f5;
   padding: 50px 0; }
@@ -141,11 +159,6 @@
     font-weight: 300;
     text-align: center;
     padding-bottom: 25px; }
-  #blog-section .post-loading {
-    width: 100%;
-    text-align: center; }
-    #blog-section .post-loading .spinner-donut {
-      margin: 0 auto; }
   #blog-section .post-content {
     margin: 0 auto;
     max-width: 800px; }
