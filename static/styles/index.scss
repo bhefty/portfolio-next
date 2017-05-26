@@ -145,7 +145,7 @@ $light-white: #f5f5f5;
         box-shadow: none;
     }
 
-    .slick-prev:before, .slick-next:before, .slick-prev:after, .slick-next:after {
+    .slick-prev:before, .slick-next:before, .slick-prev:focus, .slick-next:focus {
         font-size: 40px;
         color: #2E3440;
     }
