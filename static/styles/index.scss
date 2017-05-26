@@ -61,6 +61,57 @@ $light-white: #f5f5f5;
     }
 }
 
+.projects-splash-container {
+    position: relative;
+    
+    height: 225px;
+    overflow: hidden;
+    text-align: center;
+
+    .projects-splash-background {
+        background: $primary-color url('/static/img/projects-splash.jpeg') no-repeat center center;
+        background-size: cover;
+        -webkit-background-size: cover;
+        height: 225px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    .projects-splash-text {
+        color: $light-white;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        margin: 0;
+
+        .projects-splash-head {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 5em;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        }
+    }
+
+    .projects-splash-social-strip {
+        background-color: rgba(0, 0, 0, 0.65);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        .social-strip {
+            a {
+                margin-top: 4px;
+                margin-bottom: 0; 
+            }
+        }
+        .social {
+            transform: scale(0.75);
+        }
+    }
+}
+
 .social-strip {
     display: inline-flex;
     a {
