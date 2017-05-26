@@ -55,7 +55,6 @@ class ProjectsSection extends Component {
                         <div className="slider-container">
                         <Slider {...settings}>
                             {this.state.projects.map((project, idx) => {
-                                console.log(project.content.rendered)
                                 return (<div className="project-card" key={idx}>
                                     <ProjectCard
                                         name={project.title.rendered}
