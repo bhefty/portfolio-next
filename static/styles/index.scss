@@ -22,11 +22,22 @@ $light-white: #f5f5f5;
 
 .splash-container {
     position: relative;
-    background: $primary-color url('/static/img/splash-macbook.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 48px);
+    
+    height: 100vh;
     overflow: hidden;
     text-align: center;
+
+    .splash-background {
+        background: $primary-color url('/static/img/splash-macbook.jpg') no-repeat center center;
+        background-size: cover;
+        -webkit-background-size: cover;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
 
     .splash-text {
         color: $light-white;
@@ -53,7 +64,7 @@ $light-white: #f5f5f5;
 .social-strip {
     display: inline-flex;
     a {
-        margin: 25px;
+        margin: 20px;
     }
 }
 
@@ -92,7 +103,7 @@ $light-white: #f5f5f5;
 
 #project-spacer {
     position: relative;
-    background: $primary-color url('/static/img/macbook-projects-hero.jpeg') no-repeat center center fixed;
+    background: $primary-color url('/static/img/macbook-projects-hero.jpeg') no-repeat center center;
     background-size: cover;
     height: 35vh;
     overflow: hidden;
@@ -101,7 +112,7 @@ $light-white: #f5f5f5;
 
 #blog-spacer {
     position: relative;
-    background: $primary-color url('/static/img/blog-spacer.jpg') no-repeat center center fixed;
+    background: $primary-color url('/static/img/blog-spacer.jpg') no-repeat center center;
     background-size: cover;
     height: 35vh;
     overflow: hidden;
@@ -110,7 +121,7 @@ $light-white: #f5f5f5;
 
 #contact-spacer {
     position: relative;
-    background: $primary-color url('/static/img/contact-spacer.jpg') no-repeat center center fixed;
+    background: $primary-color url('/static/img/contact-spacer.jpg') no-repeat center center;
     background-size: cover;
     height: 35vh;
     overflow: hidden;

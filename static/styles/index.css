@@ -13,11 +13,19 @@
 
 .splash-container {
   position: relative;
-  background: #2E3440 url("/static/img/splash-macbook.jpg") no-repeat center center fixed;
-  background-size: cover;
-  height: calc(100vh - 48px);
+  height: 100vh;
   overflow: hidden;
   text-align: center; }
+  .splash-container .splash-background {
+    background: #2E3440 url("/static/img/splash-macbook.jpg") no-repeat center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1; }
   .splash-container .splash-text {
     color: #f5f5f5;
     position: absolute;
@@ -37,7 +45,7 @@
 .social-strip {
   display: inline-flex; }
   .social-strip a {
-    margin: 25px; }
+    margin: 20px; }
 
 .social {
   width: 50px;
@@ -63,7 +71,7 @@
 
 #project-spacer {
   position: relative;
-  background: #2E3440 url("/static/img/macbook-projects-hero.jpeg") no-repeat center center fixed;
+  background: #2E3440 url("/static/img/macbook-projects-hero.jpeg") no-repeat center center;
   background-size: cover;
   height: 35vh;
   overflow: hidden;
@@ -71,7 +79,7 @@
 
 #blog-spacer {
   position: relative;
-  background: #2E3440 url("/static/img/blog-spacer.jpg") no-repeat center center fixed;
+  background: #2E3440 url("/static/img/blog-spacer.jpg") no-repeat center center;
   background-size: cover;
   height: 35vh;
   overflow: hidden;
@@ -79,7 +87,7 @@
 
 #contact-spacer {
   position: relative;
-  background: #2E3440 url("/static/img/contact-spacer.jpg") no-repeat center center fixed;
+  background: #2E3440 url("/static/img/contact-spacer.jpg") no-repeat center center;
   background-size: cover;
   height: 35vh;
   overflow: hidden;
