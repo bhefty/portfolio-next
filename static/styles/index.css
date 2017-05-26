@@ -106,7 +106,7 @@
   padding: 50px 0; }
   #projects-section button, #projects-section [type="button"] {
     box-shadow: none; }
-  #projects-section .slick-prev:before, #projects-section .slick-next:before, #projects-section .slick-prev:focus, #projects-section .slick-next:focus {
+  #projects-section .slick-prev:before, #projects-section .slick-next:before, #projects-section .slick-prev:focus, #projects-section .slick-next:focus, #projects-section .slick-prev:active, #projects-section .slick-next:active, #projects-section .slick-prev:hover, #projects-section .slick-next:hover {
     font-size: 40px;
     color: #2E3440; }
   #projects-section .slick-prev {
