@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Link from 'next/link'
 
 class BlogSection extends Component {
     constructor() {
@@ -15,7 +16,8 @@ class BlogSection extends Component {
             date: new Date(json[0].date).toLocaleDateString(),
             title: json[0].title.rendered,
             excerpt: json[0].excerpt.rendered.replace(/<p class=\"link-more\">.*/g, ''),
-            mediaURL: json[0]._embedded['wp:featuredmedia'][0].source_url
+            mediaURL: json[0]._embedded['wp:featuredmedia'][0].source_url,
+            id: json[0].id
         }
         this.setState({ post: latestPost })
     }
@@ -38,8 +40,8 @@ class BlogSection extends Component {
                             <img className="post-image" src={ post.mediaURL } alt={ post.title } />
                         </div>
                         <p className="post-excerpt" dangerouslySetInnerHTML={{__html: post.excerpt }} ></p>
-                        <a href='/' className='button primary'>Continue reading...</a>
-                        <a href='/' className='button tertiary'>View all posts</a>
+                        <Link href={{pathname: '/post', query: { id: post.id }}}><a className='button primary'>Continue reading...</a></Link>
+                        <Link href='/blog'><a className='button tertiary'>View all posts</a></Link>
                     </div>
                  }
             </section>
