@@ -40,8 +40,8 @@ class BlogSection extends Component {
                             <img className="post-image" src={ post.mediaURL } alt={ post.title } />
                         </div>
                         <p className="post-excerpt" dangerouslySetInnerHTML={{__html: post.excerpt }} ></p>
-                        <Link href={{pathname: '/post', query: { id: post.id }}}><a className='button primary'>Continue reading...</a></Link>
-                        <Link href='/blog'><a className='button tertiary'>View all posts</a></Link>
+                        <Link prefetch href={{pathname: '/post', query: { id: post.id }}}><a className='button primary'>Continue reading...</a></Link>
+                        <Link prefetch href='/blog'><a className='button tertiary'>View all posts</a></Link>
                     </div>
                  }
             </section>

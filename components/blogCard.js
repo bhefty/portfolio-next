@@ -11,7 +11,7 @@ const BlogCard = props => {
             <p className="blog-date">{props.date}</p>
             <h3>{props.title}</h3>
             <p className="blog-excerpt" dangerouslySetInnerHTML={{__html: props.excerpt}}></p>
-            <Link href={{pathname: '/post', query: { id: props.id }}}><a className='button primary'>Continue reading...</a></Link>
+            <Link prefetch href={{pathname: '/post', query: { id: props.id }}}><a className='button primary'>Continue reading...</a></Link>
         </div>
     );
 };

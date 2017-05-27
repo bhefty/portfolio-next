@@ -68,7 +68,7 @@ class ProjectsSection extends Component {
                         </Slider>
                         </div>
                     }
-                    <Link href='/projects'><a className='button tertiary projects-button'>View more projects</a></Link>
+                    <Link prefetch href='/projects'><a className='button tertiary projects-button'>View more projects</a></Link>
                 </div>
             </section>
         );
