@@ -19,7 +19,7 @@ class BlogPageList extends Component {
                     <div className="blog-list">
                         {this.state.blogs.map((blog, idx) => {
                             return (
-                                <div key={idx}>
+                                <div className='animated fadeIn' key={idx}>
                                     <BlogCard
                                         title={blog.title.rendered}
                                         image={blog._embedded['wp:featuredmedia'][0].source_url}

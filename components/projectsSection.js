@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Link from 'next/link'
 import Slider from 'react-slick'
+import Reveal from 'react-reveal'
 import ProjectCard from './projectCard'
 
 class ProjectsSection extends Component {
@@ -42,6 +43,7 @@ class ProjectsSection extends Component {
 
         return (
             <section id='projects-section'>
+                <Reveal effect='animated fadeInRight'>
                 <div className="container projects-container">
                     <div className="projects-subhead">
                         <p>
@@ -70,6 +72,7 @@ class ProjectsSection extends Component {
                     }
                     <Link prefetch href='/projects'><a className='button tertiary projects-button'>View more projects</a></Link>
                 </div>
+                </Reveal>
             </section>
         );
     }

@@ -16,7 +16,7 @@ class ProjectPageList extends Component {
                         <div className="spinner-donut large tertiary"></div>
                     </div>
                     :
-                    <div className="project-list">
+                    <div className="project-list animated fadeIn">
                         {this.state.projects.map((project, idx) => {
                             return (
                                 <div key={idx}>
