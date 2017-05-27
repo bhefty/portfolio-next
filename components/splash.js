@@ -1,13 +1,13 @@
 import SocialStrip from '../components/socialStrip'
 
-export default () => (
-    <div className='splash-container'>
-        <div className="splash-background"></div>
-        <div className='splash-text'>
-            <h1 className='splash-head'>bill hefty</h1>
-            <p className='splash-subhead'>Developing engaging and productive web solutions.</p>
+export default ({ page='index', header='bill hefty', subHeader='Developing engaging and productive web solutions.' }) => (
+    <div className={`${page}-splash-container`}>
+        <div className={`${page}-splash-background`}></div>
+        <div className={`${page}-splash-text`}>
+            <h1 className={`${page}-splash-head`}>{ header }</h1>
+            <p className={`${page}-splash-subhead`}>{ subHeader }</p>
         </div>
-        <div className='splash-social-strip'>
+        <div className={`${page}-splash-social-strip`}>
             <SocialStrip />
         </div>
     </div>

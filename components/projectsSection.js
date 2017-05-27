@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import Link from 'next/link'
 import Slider from 'react-slick'
 import ProjectCard from './projectCard'
 
 class ProjectsSection extends Component {
 
     async componentDidMount() {
-        const res = await fetch(`${API_URL}?orderBy=date&order=asc&_embed&categories=3`)
+        const res = await fetch(`${API_URL}?orderBy=date&order=desc&_embed&categories=3`)
         const json = await res.json()
         this.setState({ projects: json })
     }
@@ -67,6 +68,7 @@ class ProjectsSection extends Component {
                         </Slider>
                         </div>
                     }
+                    <Link href='/projects'><a className='button tertiary projects-button'>View more projects</a></Link>
                 </div>
             </section>
         );

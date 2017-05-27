@@ -11,12 +11,12 @@
 .pull-right {
   float: right; }
 
-.splash-container {
+.index-splash-container {
   position: relative;
   height: 100vh;
   overflow: hidden;
   text-align: center; }
-  .splash-container .splash-background {
+  .index-splash-container .index-splash-background {
     background: #2E3440 url("/static/img/splash-macbook.jpg") no-repeat center center;
     background-size: cover;
     -webkit-background-size: cover;
@@ -26,21 +26,57 @@
     left: 0;
     right: 0;
     z-index: -1; }
-  .splash-container .splash-text {
+  .index-splash-container .index-splash-text {
     color: #f5f5f5;
     position: absolute;
     top: 30vh;
     width: 100%;
     margin: 0; }
-    .splash-container .splash-text .splash-head {
+    .index-splash-container .index-splash-text .index-splash-head {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 5em;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
-  .splash-container .splash-social-strip {
+  .index-splash-container .index-splash-social-strip {
     background-color: rgba(0, 0, 0, 0.65);
     position: absolute;
     bottom: 0;
     width: 100%; }
+
+.projects-splash-container {
+  position: relative;
+  height: 225px;
+  overflow: hidden;
+  text-align: center; }
+  .projects-splash-container .projects-splash-background {
+    background: #2E3440 url("/static/img/projects-splash.jpeg") no-repeat center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    height: 225px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1; }
+  .projects-splash-container .projects-splash-text {
+    color: #f5f5f5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 0; }
+    .projects-splash-container .projects-splash-text .projects-splash-head {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 5em;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
+  .projects-splash-container .projects-splash-social-strip {
+    background-color: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    bottom: 0;
+    width: 100%; }
+    .projects-splash-container .projects-splash-social-strip .social-strip a {
+      margin-top: 4px;
+      margin-bottom: 0; }
+    .projects-splash-container .projects-splash-social-strip .social {
+      transform: scale(0.75); }
 
 .social-strip {
   display: inline-flex; }
@@ -103,9 +139,8 @@
 
 #projects-section {
   background-color: #f5f5f5;
-  padding: 50px 0; }
-  #projects-section button, #projects-section [type="button"] {
-    box-shadow: none; }
+  padding: 50px 0;
+  text-align: center; }
   #projects-section .slick-prev:before, #projects-section .slick-next:before {
     font-size: 40px;
     color: #2E3440; }
@@ -115,7 +150,10 @@
     right: -45px; }
   #projects-section .slick-arrow {
     width: 40px;
-    height: 40px; }
+    height: 40px;
+    box-shadow: none; }
+  #projects-section .slick-dots li button {
+    box-shadow: none; }
   #projects-section .projects-container {
     margin: 0 auto;
     max-width: 80%;
@@ -129,6 +167,8 @@
     #projects-section .projects-container .slider-container {
       max-width: 900px;
       margin: 0 auto; }
+    #projects-section .projects-container .projects-button {
+      margin-top: 4em; }
 
 .project-card {
   text-align: center; }
@@ -213,3 +253,30 @@ footer {
   footer .social {
     width: 30px;
     height: 30px; }
+
+#project-page-list-container {
+  background-color: #f5f5f5;
+  padding: 50px 0; }
+  #project-page-list-container .project-list {
+    margin: 0 auto;
+    text-align: center; }
+  #project-page-list-container .project-card-link {
+    font-size: 1em;
+    color: #A0A6AB;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none; }
+  #project-page-list-container h3 {
+    font-size: 2.5em;
+    color: #555;
+    margin: 0.8em 0; }
+  #project-page-list-container p {
+    font-size: 1.2em;
+    margin: 0 auto;
+    max-width: 800px; }
+  #project-page-list-container hr {
+    margin: 6em 0;
+    height: 1px;
+    border: 0;
+    background: black;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#f5f5f5), to(#f5f5f5), color-stop(50%, #2E3440)); }

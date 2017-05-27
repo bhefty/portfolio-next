@@ -7,7 +7,7 @@ import Footer from './footer'
 
 import 'isomorphic-fetch'
 
-export default ({ children, title = 'Bill Hefty' }) => (
+export default ({ children, title='Bill Hefty', splashHeader=(<Splash />) }) => (
     <div>
         <Head>
             <title>{ title }</title>
@@ -22,7 +22,7 @@ export default ({ children, title = 'Bill Hefty' }) => (
             <link rel='stylesheet' href='/static/styles/index.css' />
         </Head>
 
-        <Splash />
+        { splashHeader }
         
         <header className='sticky'>
             <label className='drawer-toggle button' htmlFor='navigation-toggle'></label>

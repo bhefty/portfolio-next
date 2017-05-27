@@ -20,14 +20,14 @@ $light-white: #f5f5f5;
     float: right;
 }
 
-.splash-container {
+.index-splash-container {
     position: relative;
     
     height: 100vh;
     overflow: hidden;
     text-align: center;
 
-    .splash-background {
+    .index-splash-background {
         background: $primary-color url('/static/img/splash-macbook.jpg') no-repeat center center;
         background-size: cover;
         -webkit-background-size: cover;
@@ -39,25 +39,76 @@ $light-white: #f5f5f5;
         z-index: -1;
     }
 
-    .splash-text {
+    .index-splash-text {
         color: $light-white;
         position: absolute;
         top: 30vh;
         width: 100%;
         margin: 0;
 
-        .splash-head {
+        .index-splash-head {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 5em;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
         }
     }
 
-    .splash-social-strip {
+    .index-splash-social-strip {
         background-color: rgba(0, 0, 0, 0.65);
         position: absolute;
         bottom: 0;
         width: 100%;
+    }
+}
+
+.projects-splash-container {
+    position: relative;
+    
+    height: 225px;
+    overflow: hidden;
+    text-align: center;
+
+    .projects-splash-background {
+        background: $primary-color url('/static/img/projects-splash.jpeg') no-repeat center center;
+        background-size: cover;
+        -webkit-background-size: cover;
+        height: 225px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    .projects-splash-text {
+        color: $light-white;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        margin: 0;
+
+        .projects-splash-head {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 5em;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        }
+    }
+
+    .projects-splash-social-strip {
+        background-color: rgba(0, 0, 0, 0.65);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        .social-strip {
+            a {
+                margin-top: 4px;
+                margin-bottom: 0; 
+            }
+        }
+        .social {
+            transform: scale(0.75);
+        }
     }
 }
 
@@ -140,10 +191,7 @@ $light-white: #f5f5f5;
 #projects-section {
     background-color: $light-white;
     padding: 50px 0;
-
-    button, [type="button"] {
-        box-shadow: none;
-    }
+    text-align: center;
 
     .slick-prev:before, .slick-next:before, {
         font-size: 40px;
@@ -161,6 +209,15 @@ $light-white: #f5f5f5;
     .slick-arrow {
         width: 40px;
         height: 40px;
+        box-shadow: none;
+    }
+
+    .slick-dots {
+        li {
+            button {
+                box-shadow: none;
+            }
+        }
     }
 
     .projects-container {
@@ -179,6 +236,10 @@ $light-white: #f5f5f5;
         .slider-container {
             max-width: 900px;
             margin: 0 auto;
+        }
+
+        .projects-button {
+            margin-top: 4em;
         }
     }
 }
@@ -305,5 +366,43 @@ footer {
     .social {
         width: 30px;
         height: 30px;
+    }
+}
+
+#project-page-list-container {
+    background-color: $light-white;
+    padding: 50px 0;
+
+    .project-list {
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .project-card-link {
+        font-size: 1em;
+        color: #A0A6AB;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    
+    h3 {
+        font-size: 2.5em;
+        color: #555;
+        margin: 0.8em 0;
+    }
+
+    p {
+        font-size: 1.2em;
+        margin: 0 auto;
+        max-width: 800px;
+    }
+    
+    hr {
+        margin: 6em 0;
+        height: 1px;
+        border: 0;
+        background: black;
+        background: -webkit-gradient(linear, 0 0, 100% 0, from($light-white), to($light-white), color-stop(50%, $primary-color));
     }
 }
