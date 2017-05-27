@@ -363,6 +363,8 @@ footer {
   background-color: #f5f5f5;
   padding-top: 0;
   padding-bottom: 50px; }
+  #blog-post-container .loading {
+    padding-top: 50px; }
   #blog-post-container .blog-list {
     margin: 0 auto;
     text-align: center; }
