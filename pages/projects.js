@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Layout from '../components/layout'
 import Splash from '../components/splash'
+import ProjectPageList from '../components/projectPageList'
 
 export default() => (
     <Layout
@@ -11,67 +12,6 @@ export default() => (
             subHeader='Checkout some of my recent projects.'
         />)}
     >
-        <h1>Hello from projects</h1>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <ProjectPageList />
     </Layout>
 )

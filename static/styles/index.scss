@@ -358,3 +358,45 @@ footer {
         height: 30px;
     }
 }
+
+#project-page-list-container {
+    background-color: $light-white;
+    padding: 50px 0;
+
+    .project-list {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .project-card-container {
+        // margin-bottom: 8em;
+    }
+
+    .project-card-link {
+        font-size: 1em;
+        color: #A0A6AB;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    
+    h3 {
+        font-size: 2.5em;
+        color: #555;
+        margin: 0.8em 0;
+    }
+
+    p {
+        font-size: 1.2em;
+        margin: 0 auto;
+        max-width: 800px;
+    }
+    
+    hr {
+        margin: 6em 0;
+        height: 1px;
+        border: 0;
+        background: black;
+        background: -webkit-gradient(linear, 0 0, 100% 0, from($light-white), to($light-white), color-stop(50%, $primary-color));
+    }
+}
