@@ -8,6 +8,7 @@
     "next": "^2.4.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-reveal": "^0.1.1",
     "react-slick": "^0.14.11",
     "slick-carousel": "^1.6.0"
   },

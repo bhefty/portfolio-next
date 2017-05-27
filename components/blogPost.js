@@ -20,7 +20,7 @@ class BlogPost extends Component {
                             <div className="spinner-donut large tertiary"></div>
                         </div>
                         :
-                <div className='blog-card-container'>
+                <div className='blog-card-container animated fadeIn'>
                     <div className="blog-card-img">
                         <img src={this.state.post.mediaURL} alt={this.state.post.title}/>
                     </div>
