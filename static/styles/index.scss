@@ -513,3 +513,60 @@ footer {
         margin-top: 3em;
     }
 }
+
+#blog-post-container {
+    background-color: $light-white;
+    padding-top: 0;
+    padding-bottom: 50px;
+
+    .blog-list {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .blog-card-img {
+        height: 100vh;
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .blog-date {
+        font-size: 1em;
+        color: #A0A6AB;
+        letter-spacing: 2px;
+        margin-top: 1em;
+        text-align: center;
+    }
+
+    .blog-content {
+        text-align: justify;
+    }
+    
+    h3 {
+        font-size: 2.5em;
+        color: #555;
+        margin: 0.8em auto;
+        max-width: 1000px;
+    }
+
+    p {
+        font-size: 1.2em;
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+    
+    hr {
+        margin: 3em 0;
+        height: 1px;
+        border: 0;
+        background: black;
+        background: -webkit-gradient(linear, 0 0, 100% 0, from($light-white), to($light-white), color-stop(50%, $primary-color));
+    }
+
+    .button {
+        margin-top: 3em;
+    }
+}

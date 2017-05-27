@@ -25,7 +25,7 @@ class BlogPageList extends Component {
                                         image={blog._embedded['wp:featuredmedia'][0].source_url}
                                         date={new Date(blog.date).toLocaleDateString()}
                                         excerpt={blog.excerpt.rendered.replace(/<p class=\"link-more\">.*/g, '')}
-
+                                        id={blog.id}
                                     />
                                     {idx + 1 !== this.state.blogs.length &&
                                         <hr />

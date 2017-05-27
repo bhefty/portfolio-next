@@ -1,6 +1,5 @@
 import Layout from '../components/layout'
 import Splash from '../components/splash'
-import BlogPageList from '../components/blogPageList'
 import BlogPost from '../components/blogPost'
 
 export default(props) => (
@@ -13,9 +12,9 @@ export default(props) => (
         />)}
     >
         {!props.url.query.id ? 
-            <BlogPageList />
+            <h1>No query</h1>
         :
-            <BlogPageList id={props.url.query.id} />
+            <BlogPost id={props.url.query.id} />
         }
     </Layout>
 )

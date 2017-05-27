@@ -353,3 +353,42 @@ footer {
     background: -webkit-gradient(linear, 0 0, 100% 0, from(#f5f5f5), to(#f5f5f5), color-stop(50%, #2E3440)); }
   #blog-page-list-container .button {
     margin-top: 3em; }
+
+#blog-post-container {
+  background-color: #f5f5f5;
+  padding-top: 0;
+  padding-bottom: 50px; }
+  #blog-post-container .blog-list {
+    margin: 0 auto;
+    text-align: center; }
+  #blog-post-container .blog-card-img {
+    height: 100vh; }
+    #blog-post-container .blog-card-img img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%; }
+  #blog-post-container .blog-date {
+    font-size: 1em;
+    color: #A0A6AB;
+    letter-spacing: 2px;
+    margin-top: 1em;
+    text-align: center; }
+  #blog-post-container .blog-content {
+    text-align: justify; }
+  #blog-post-container h3 {
+    font-size: 2.5em;
+    color: #555;
+    margin: 0.8em auto;
+    max-width: 1000px; }
+  #blog-post-container p {
+    font-size: 1.2em;
+    margin: 0 auto;
+    max-width: 1000px; }
+  #blog-post-container hr {
+    margin: 3em 0;
+    height: 1px;
+    border: 0;
+    background: black;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#f5f5f5), to(#f5f5f5), color-stop(50%, #2E3440)); }
+  #blog-post-container .button {
+    margin-top: 3em; }
