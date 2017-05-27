@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import Layout from '../components/layout'
 import Splash from '../components/splash'
 import ProjectPageList from '../components/projectPageList'
