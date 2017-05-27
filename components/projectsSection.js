@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Link from 'next/link'
 import Slider from 'react-slick'
 import ProjectCard from './projectCard'
 
@@ -67,6 +68,7 @@ class ProjectsSection extends Component {
                         </Slider>
                         </div>
                     }
+                    <Link href='/projects'><a className='button tertiary projects-button'>View more projects</a></Link>
                 </div>
             </section>
         );
