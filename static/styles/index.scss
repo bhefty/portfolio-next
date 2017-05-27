@@ -112,6 +112,58 @@ $light-white: #f5f5f5;
     }
 }
 
+.blog-splash-container {
+    position: relative;
+    
+    height: 225px;
+    overflow: hidden;
+    text-align: center;
+
+    .blog-splash-background {
+        background: $primary-color url('/static/img/blog-splash.jpeg') no-repeat center center;
+        background-size: cover;
+        -webkit-background-size: cover;
+        height: 225px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    .blog-splash-text {
+        color: $light-white;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        margin: 0;
+
+        .blog-splash-head {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 5em;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        }
+    }
+
+    .blog-splash-social-strip {
+        background-color: rgba(0, 0, 0, 0.65);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        .social-strip {
+            a {
+                margin-top: 4px;
+                margin-bottom: 0; 
+            }
+        }
+        .social {
+            transform: scale(0.75);
+        }
+    }
+}
+
+
 .social-strip {
     display: inline-flex;
     a {
@@ -404,5 +456,60 @@ footer {
         border: 0;
         background: black;
         background: -webkit-gradient(linear, 0 0, 100% 0, from($light-white), to($light-white), color-stop(50%, $primary-color));
+    }
+}
+
+#blog-page-list-container {
+    background-color: $light-white;
+    padding: 50px 0;
+
+    .blog-list {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .blog-card-img {
+        height: 320px;
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .blog-date {
+        font-size: 1em;
+        color: #A0A6AB;
+        letter-spacing: 2px;
+        margin-top: 1em;
+    }
+
+    .blog-excerpt {
+        text-align: justify;
+    }
+    
+    h3 {
+        font-size: 2.5em;
+        color: #555;
+        margin: 0.8em auto;
+        max-width: 1000px;
+    }
+
+    p {
+        font-size: 1.2em;
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+    
+    hr {
+        margin: 6em 0;
+        height: 1px;
+        border: 0;
+        background: black;
+        background: -webkit-gradient(linear, 0 0, 100% 0, from($light-white), to($light-white), color-stop(50%, $primary-color));
+    }
+
+    .button {
+        margin-top: 3em;
     }
 }
