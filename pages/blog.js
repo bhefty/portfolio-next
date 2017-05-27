@@ -8,7 +8,7 @@ export default() => (
         splashHeader={(<Splash
             page='blog'
             header='blog'
-            subHeader='Read aboout some of my latest journeys and findings.'
+            subHeader='Read about some of my latest journeys and findings.'
         />)}
     >
         <BlogPageList />
