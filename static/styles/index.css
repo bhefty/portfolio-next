@@ -53,7 +53,7 @@ nav a, nav a:visited {
   overflow: hidden;
   text-align: center; }
   .projects-splash-container .projects-splash-background {
-    background: #2E3440 url("/static/img/projects-splash.jpeg") no-repeat center center;
+    background: #2E3440 url("/static/img/projects-splash.jpg") no-repeat center center;
     background-size: cover;
     -webkit-background-size: cover;
     height: 225px;
@@ -89,7 +89,7 @@ nav a, nav a:visited {
   overflow: hidden;
   text-align: center; }
   .blog-splash-container .blog-splash-background {
-    background: #2E3440 url("/static/img/blog-splash.jpeg") no-repeat center center;
+    background: #2E3440 url("/static/img/blog-splash.jpg") no-repeat center center;
     background-size: cover;
     -webkit-background-size: cover;
     height: 225px;
@@ -148,7 +148,7 @@ nav a, nav a:visited {
 
 #project-spacer {
   position: relative;
-  background: #2E3440 url("/static/img/macbook-projects-hero.jpeg") no-repeat center center;
+  background: #2E3440 url("/static/img/macbook-projects-hero.jpg") no-repeat center center;
   background-size: cover;
   height: 35vh;
   overflow: hidden;
