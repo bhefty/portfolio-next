@@ -10,17 +10,23 @@ import Contact from '../components/contact'
 
 export default class extends Component {
     static async getInitialProps() {
-        const res = await fetch(`http://portfoliowp.x10host.com/wp-json/wp/v2/posts?orderBy=date&per_page=1&_embed&categories=2`)
-        const json = await res.json()
+        // Fetch recent projects
+        const resRecentProjects = await fetch(`http://portfoliowp.x10host.com/wp-json/wp/v2/posts?orderBy=date&order=desc&_embed&categories=3`)
+        const jsonRecentProjects = await resRecentProjects.json()
+
+        // Fetch recent post
+        const resRecentPost = await fetch(`http://portfoliowp.x10host.com/wp-json/wp/v2/posts?orderBy=date&per_page=1&_embed&categories=2`)
+        const jsonRecentPost = await resRecentPost.json()
         const latestPost = {
-            date: new Date(json[0].date).toLocaleDateString(),
-            title: json[0].title.rendered,
-            excerpt: json[0].excerpt.rendered.replace(/<p class=\"link-more\">.*/g, ''),
-            mediaURL: json[0]._embedded['wp:featuredmedia'][0].source_url,
-            id: json[0].id
+            date: new Date(jsonRecentPost[0].date).toLocaleDateString(),
+            title: jsonRecentPost[0].title.rendered,
+            excerpt: jsonRecentPost[0].excerpt.rendered.replace(/<p class=\"link-more\">.*/g, ''),
+            mediaURL: jsonRecentPost[0]._embedded['wp:featuredmedia'][0].source_url,
+            id: jsonRecentPost[0].id
         }
-        console.log('server', latestPost)
-        return { post: latestPost }
+        
+        // Add to props
+        return { projects: jsonRecentProjects, post: latestPost }
     }
 
     render() {
@@ -29,7 +35,7 @@ export default class extends Component {
                 <Layout>
                     <About />
                     <ProjectSpacer />
-                    <ProjectsSection />
+                    <ProjectsSection projects={this.props.projects} />
                     <BlogSpacer />
                     <BlogSection post={this.props.post} />
                     <ContactSpacer />
