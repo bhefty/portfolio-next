@@ -7,7 +7,7 @@ export default class extends Component {
     static async getInitialProps() {
         const res = await fetch(`http://portfoliowp.x10host.com/wp-json/wp/v2/posts?orderBy=date&order=desc&_embed&categories=4`)
         const json = await res.json()
-        this.setState({ projects: json })
+        return { projects: json }
     }
 
     render() {
