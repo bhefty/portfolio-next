@@ -5,7 +5,7 @@ import BlogPost from '../components/blogPost'
 
 export default class extends Component {
     static async getInitialProps(props) {
-        const res = await fetch(`${props.req.protocol}://${req.get('Host')}/api/post:${props.query.id}`)
+        const res = await fetch(`${props.req.protocol}://${props.req.get('Host')}/api/post:${props.query.id}`)
         const json = res.json()
         return { post: blogPost }
         // const res = await fetch(`http://portfoliowp.x10host.com/wp-json/wp/v2/posts/${props.query.id}?_embed`)
