@@ -5,10 +5,16 @@ import BlogPageList from '../components/blogPageList'
 import BlogPost from '../components/blogPost'
 
 export default class extends Component { 
-    static async getInitialProps() {
-        const res = await fetch(`http://portfoliowp.x10host.com/wp-json/wp/v2/posts?orderBy=date&_embed&categories=2`)
+    static async getInitialProps(props) {
+        if (props.req) {
+            const protocol = (props.req.secure) ? 'https' : 'http'
+            const res = await fetch(`${protocol}://${props.req.get('Host')}/api/blog`)
+            const json = await res.json()
+            return { blogs: json.blogsJSON }
+        }
+        const res = await fetch(`/api/blog`)
         const json = await res.json()
-        return { blogs: json }
+        return { blogs: json.blogsJSON }
     }
 
     render() {
