@@ -5,7 +5,13 @@ import BlogPost from '../components/blogPost'
 
 export default class extends Component {
     static async getInitialProps(props) {
-        const res = await fetch(`http://localhost:3000/api/post/${props.query.id}`)
+        if (props.req) {
+            const protocol = (props.req.secure) ? 'https' : 'http'
+            const res = await fetch(`${protocol}://${props.req.get('Host')}/api/post/${props.query.id}`)
+            const json = await res.json()
+            return { post: json.blogPost }
+        }
+        const res = await fetch(`/api/post/${props.query.id}`)
         const json = await res.json()
         return { post: json.blogPost }
     }
