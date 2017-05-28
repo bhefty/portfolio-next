@@ -31,7 +31,7 @@ export default class extends Component {
                     <ProjectSpacer />
                     <ProjectsSection />
                     <BlogSpacer />
-                    <BlogSection />
+                    <BlogSection post={this.props.post} />
                     <ContactSpacer />
                     <Contact />
                 </Layout>
