@@ -1,7 +1,6 @@
 require('dotenv').config()
 const express = require('express')
 const next = require('next')
-const LRUCache = require('lru-cache')
 const fetch = require('isomorphic-fetch')
 
 const dev = process.env.NODE_ENV !== 'production'
@@ -11,12 +10,6 @@ const handle = app.getRequestHandler()
 const PORT = process.env.PORT || 3000
 const API_URI = process.env.API_URI
 
-// Cache rendered HTML pages
-const ssrCache = new LRUCache({
-    max: 100,
-    maxAge: 1000 * 60 * 60 // 1 hour
-})
-
 app.prepare()
     .then(() => {
         const server = express()
@@ -24,11 +17,6 @@ app.prepare()
         const wrapAsync = handler => (req, res) => handler(req)
             .then(result => res.json(result))
             .catch(error => res.status(500).json({ error: error.message }))
-
-        // Use the `renderAndCache` utility defined below to serve pages
-        server.get('/', (req, res) => {
-            renderAndCache(req, res, '/')
-        })
 
         server.get('/api/blog', wrapAsync(async function(req) {
             const apiResponse = await fetch(`${API_URI}?orderBy=date&_embed&categories=2`)
@@ -73,11 +61,6 @@ app.prepare()
             return { blogPost }
         }))
 
-        server.get('/post/:id', (req, res) => {
-            const queryParams = { id: req.params.id }
-            renderAndCache(req, res, '/post', queryParams )
-        })
-
         server.get('*', (req, res) => {
             return handle(req, res)
         })
@@ -87,31 +70,3 @@ app.prepare()
             console.log(`> Ready on http://localhost:${PORT}`)
         })
     })
-
-function getCacheKey(req) {
-    return `${req.url}`
-}
-
-function renderAndCache(req, res, pagePath, queryParams) {
-    const key = getCacheKey(req)
-
-    // If page is in the cache, serve it
-    if (ssrCache.has(key)) {
-        console.log(`CACHE HIT: ${key}`)
-        res.send(ssrCache.get(key))
-        return
-    }
-
-    // If not in cache, render the page into HTML
-    app.renderToHTML(req, res, pagePath, queryParams)
-        .then((html) => {
-            // Cache the page
-            console.log(`CACHE MISS: ${key}`)
-            ssrCache.set(key, html)
-
-            res.send(html)
-        })
-        .catch((err) => {
-            app.renderError(err, req, res, pagePath, queryParams)
-        })
-}
