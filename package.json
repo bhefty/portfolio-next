@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "dependencies": {
     "babel-plugin-transform-define": "^1.3.0",
+    "express": "^4.15.3",
     "isomorphic-fetch": "^2.2.1",
+    "lru-cache": "^4.0.2",
     "mini.css": "^2.2.0",
     "next": "^2.4.0",
     "react": "^15.5.4",
@@ -17,7 +19,7 @@
     "watch-css": "npm run build-css && node-sass-chokidar static/styles -o static/styles --watch --recursive",
     "dev": "next",
     "build": "next build",
-    "start": "next start -p $PORT",
+    "start": "NODE_ENV=production node server.js",
     "heroku-postbuild": "next build"
   },
   "devDependencies": {
