@@ -4,10 +4,16 @@ import Splash from '../components/splash'
 import ProjectPageList from '../components/projectPageList'
 
 export default class extends Component {
-    static async getInitialProps() {
-        const res = await fetch(`http://portfoliowp.x10host.com/wp-json/wp/v2/posts?orderBy=date&order=desc&_embed&categories=4`)
+    static async getInitialProps(props) {
+        if (props.req) {
+            const protocol = (props.req.secure) ? 'https' : 'http'
+            const res = await fetch(`${protocol}://${props.req.get('Host')}/api/projects`)
+            const json = await res.json()
+            return { projects: json.projectsJSON }
+        }
+        const res = await fetch(`/api/projects`)
         const json = await res.json()
-        return { projects: json }
+        return { projects: json.projectsJSON }
     }
 
     render() {
