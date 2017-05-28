@@ -17,7 +17,7 @@
   "scripts": {
     "build-css": "node-sass-chokidar static/styles -o static/styles",
     "watch-css": "npm run build-css && node-sass-chokidar static/styles -o static/styles --watch --recursive",
-    "dev": "next",
+    "dev": "next build && NODE_ENV=development node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "heroku-postbuild": "next build"
