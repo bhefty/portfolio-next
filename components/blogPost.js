@@ -15,7 +15,7 @@ const BlogPost = props => {
                     <img src={post.mediaURL} alt={post.title}/>
                 </div>
                 <p className="blog-date">{post.date}</p>
-                <h3>{post.title}</h3>
+                <h1 className='post-title'>{post.title}</h1>
                 <p className="blog-content" dangerouslySetInnerHTML={{__html: post.content}}></p>
             </div>
             }

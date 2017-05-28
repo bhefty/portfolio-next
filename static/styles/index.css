@@ -382,12 +382,35 @@ footer {
     text-align: center; }
   #blog-post-container .blog-content {
     padding: 0 20px; }
-  #blog-post-container h3 {
-    font-size: 2.5em;
+  #blog-post-container .post-title {
     color: #555;
     margin: 0.8em auto;
     max-width: 1000px;
     padding: 0 20px; }
+  #blog-post-container h1 {
+    font-size: 2.5em;
+    margin: 0.8em auto;
+    color: #555; }
+  #blog-post-container h2 {
+    font-size: 2em;
+    margin: 0.8em auto;
+    color: #555; }
+  #blog-post-container h3 {
+    font-size: 1.5em;
+    margin: 0.8em auto;
+    color: #555; }
+  #blog-post-container h4 {
+    font-size: 1em;
+    margin: 0.8em auto;
+    color: #555; }
+  #blog-post-container h5 {
+    font-size: 0.85em;
+    margin: 0.8em auto;
+    color: #555; }
+  #blog-post-container h6 {
+    font-size: 0.75em;
+    margin: 0.8em auto;
+    color: #555; }
   #blog-post-container p {
     font-size: 1.2em;
     margin: 0 auto;
