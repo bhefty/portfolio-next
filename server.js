@@ -34,6 +34,25 @@ app.prepare()
             return { blogsJSON }
         }))
 
+        server.get('/api/recentpost', wrapAsync(async function(req) {
+            const apiResponse = await fetch(`http://portfoliowp.x10host.com/wp-json/wp/v2/posts?orderBy=date&per_page=1&_embed&categories=2`)
+            const json = await apiResponse.json()
+            const latestPost = {
+                date: new Date(json[0].date).toLocaleDateString(),
+                title: json[0].title.rendered,
+                excerpt: json[0].excerpt.rendered.replace(/<p class=\"link-more\">.*/g, ''),
+                mediaURL: json[0]._embedded['wp:featuredmedia'][0].source_url,
+                id: json[0].id
+            }
+            return { latestPost }
+        }))
+
+        server.get('/api/recentprojects', wrapAsync(async function(req) {
+            const apiResponse = await fetch(`http://portfoliowp.x10host.com/wp-json/wp/v2/posts?orderBy=date&order=desc&_embed&categories=3`)
+            const recentProjectsJSON = await apiResponse.json()
+            return { recentProjectsJSON }
+        }))
+
         server.get('/api/projects', wrapAsync(async function(req) {
             const apiResponse = await fetch(`http://portfoliowp.x10host.com/wp-json/wp/v2/posts?orderBy=date&order=desc&_embed&categories=4`)
             const projectsJSON = await apiResponse.json()
