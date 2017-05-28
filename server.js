@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const next = require('next')
 const LRUCache = require('lru-cache')
@@ -8,6 +9,7 @@ const app = next({ dir: '.', dev })
 const handle = app.getRequestHandler()
 
 const PORT = process.env.PORT || 3000
+const API_URI = process.env.API_URI
 
 // Cache rendered HTML pages
 const ssrCache = new LRUCache({
@@ -29,13 +31,13 @@ app.prepare()
         })
 
         server.get('/api/blog', wrapAsync(async function(req) {
-            const apiResponse = await fetch(`http://portfoliowp.x10host.com/wp-json/wp/v2/posts?orderBy=date&_embed&categories=2`)
+            const apiResponse = await fetch(`${API_URI}?orderBy=date&_embed&categories=2`)
             const blogsJSON = await apiResponse.json()
             return { blogsJSON }
         }))
 
         server.get('/api/recentpost', wrapAsync(async function(req) {
-            const apiResponse = await fetch(`http://portfoliowp.x10host.com/wp-json/wp/v2/posts?orderBy=date&per_page=1&_embed&categories=2`)
+            const apiResponse = await fetch(`${API_URI}?orderBy=date&per_page=1&_embed&categories=2`)
             const json = await apiResponse.json()
             const latestPost = {
                 date: new Date(json[0].date).toLocaleDateString(),
@@ -48,19 +50,19 @@ app.prepare()
         }))
 
         server.get('/api/recentprojects', wrapAsync(async function(req) {
-            const apiResponse = await fetch(`http://portfoliowp.x10host.com/wp-json/wp/v2/posts?orderBy=date&order=desc&_embed&categories=3`)
+            const apiResponse = await fetch(`${API_URI}?orderBy=date&order=desc&_embed&categories=3`)
             const recentProjectsJSON = await apiResponse.json()
             return { recentProjectsJSON }
         }))
 
         server.get('/api/projects', wrapAsync(async function(req) {
-            const apiResponse = await fetch(`http://portfoliowp.x10host.com/wp-json/wp/v2/posts?orderBy=date&order=desc&_embed&categories=4`)
+            const apiResponse = await fetch(`${API_URI}?orderBy=date&order=desc&_embed&categories=4`)
             const projectsJSON = await apiResponse.json()
             return { projectsJSON }
         }))
 
         server.get('/api/post/:id', wrapAsync(async function(req) {
-            const apiResponse = await fetch(`http://portfoliowp.x10host.com/wp-json/wp/v2/posts/${req.params.id}?_embed`)
+            const apiResponse = await fetch(`${API_URI}/${req.params.id}?_embed`)
             const json = await apiResponse.json()
             const blogPost = {
                 date: new Date(json.date).toLocaleDateString(),

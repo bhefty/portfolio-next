@@ -5,6 +5,9 @@ node_modules
 dist
 .next
 
+# global variables
+.env
+
 # logs
 npm-debug.log
 
