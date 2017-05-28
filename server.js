@@ -28,6 +28,12 @@ app.prepare()
             renderAndCache(req, res, '/')
         })
 
+        server.get('/api/blog', wrapAsync(async function(req) {
+            const apiResponse = await fetch(`http://portfoliowp.x10host.com/wp-json/wp/v2/posts?orderBy=date&_embed&categories=2`)
+            const blogsJSON = await apiResponse.json()
+            return { blogsJSON }
+        }))
+
         server.get('/api/projects', wrapAsync(async function(req) {
             const apiResponse = await fetch(`http://portfoliowp.x10host.com/wp-json/wp/v2/posts?orderBy=date&order=desc&_embed&categories=4`)
             const projectsJSON = await apiResponse.json()
