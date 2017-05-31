@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { initGA, logPagePview } from '../utils/analytics'
 import Layout from '../components/layout'
 import Splash from '../components/splash'
 import BlogPost from '../components/blogPost'
@@ -14,6 +15,11 @@ export default class extends Component {
         const res = await fetch(`/api/post/${props.query.id}`)
         const json = await res.json()
         return { post: json.blogPost }
+    }
+
+    componentDidMount() {
+        initGA()
+        logPagePview()
     }
 
     render() {

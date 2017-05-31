@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { initGA, logPagePview } from '../utils/analytics'
 import Layout from '../components/layout'
 import Splash from '../components/splash'
 import ProjectPageList from '../components/projectPageList'
@@ -14,6 +15,11 @@ export default class extends Component {
         const res = await fetch(`/api/projects`)
         const json = await res.json()
         return { projects: json.projectsJSON }
+    }
+
+    componentDidMount() {
+        initGA()
+        logPagePview()
     }
 
     render() {

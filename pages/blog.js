@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { initGA, logPagePview } from '../utils/analytics'
 import Layout from '../components/layout'
 import Splash from '../components/splash'
 import BlogPageList from '../components/blogPageList'
@@ -16,6 +17,12 @@ export default class extends Component {
         const json = await res.json()
         return { blogs: json.blogsJSON }
     }
+
+    componentDidMount() {
+        initGA()
+        logPagePview()
+    }
+    
 
     render() {
         return (

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { initGA, logPagePview } from '../utils/analytics'
 import Layout from '../components/layout'
 import About from '../components/about'
 import ProjectSpacer from '../components/projectSpacer'
@@ -29,6 +30,11 @@ export default class extends Component {
         const resRecentPost = await fetch(`/api/recentpost`)
         const recentPostJSON = await resRecentPost.json()
         return { projects: recentProjectsJSON.recentProjectsJSON, post: recentPostJSON.latestPost }
+    }
+
+    componentDidMount() {
+        initGA()
+        logPagePview()
     }
 
     render() {
