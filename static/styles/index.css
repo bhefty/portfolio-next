@@ -41,6 +41,8 @@ nav a, nav a:visited {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 5em;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
+    .index-splash-container .index-splash-text .index-splash-subhead {
+      font-size: 1.5em; }
   .index-splash-container .index-splash-social-strip {
     background-color: rgba(0, 0, 0, 0.65);
     position: absolute;
@@ -72,6 +74,8 @@ nav a, nav a:visited {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 5em;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
+    .projects-splash-container .projects-splash-text .projects-splash-subhead {
+      font-size: 1.5em; }
   .projects-splash-container .projects-splash-social-strip {
     background-color: rgba(0, 0, 0, 0.65);
     position: absolute;
@@ -108,6 +112,8 @@ nav a, nav a:visited {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 5em;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
+    .blog-splash-container .blog-splash-text .blog-splash-subhead {
+      font-size: 1.5em; }
   .blog-splash-container .blog-splash-social-strip {
     background-color: rgba(0, 0, 0, 0.65);
     position: absolute;
